@@ -1,0 +1,11 @@
+import { Router } from "express";
+import { UsuarioController } from "../controllers/UsuarioController";
+
+const router = Router();
+
+router.get("/", UsuarioController.listar);
+router.post("/", UsuarioController.criar);
+router.put("/:id", UsuarioController.atualizar);
+router.delete("/:id", UsuarioController.remover);
+
+export default router;
